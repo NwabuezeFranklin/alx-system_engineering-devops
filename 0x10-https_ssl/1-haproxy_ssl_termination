@@ -33,22 +33,21 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
+
+
 # start of parameters for nwabueze.tech
 frontend nwabueze.tech-http-frontend
         bind     *:80
+        redirect scheme https code 301 if !{ ssl_fc }
         http-request set-header X-Forwarded-Proto http
         default_backend  nwabueze.tech-backend
-
-
-frontend  nwabueze.tech-https-frontend
+frontend b3zaleel-alx.tech-https-frontend
         bind *:443 ssl crt /etc/letsencrypt/live/www.nwabueze.tech/fullchain.pem
         http-request set-header X-Forwarded-Proto https
         default_backend nwabueze.tech-backend
-
-
 backend nwabueze.tech-backend
         balance roundrobin
         server 17272-web-01 52.91.121.146:80 check
         server 17272-web-02 3.85.136.181:80 check
 # end of parameters
-
+                                                                                                 51,15         Bot
