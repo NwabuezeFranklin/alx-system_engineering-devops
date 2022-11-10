@@ -13,7 +13,7 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-my
 ## Create Databases and Tables
 https://www.cyberciti.biz/faq/howto-linux-unix-creating-database-and-table/
 
-### The above Links are perfect to complete the  
+### The above Links are perfect to complete the  ALX projects
 
 
 # Further reading and solutions
